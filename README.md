@@ -1,4 +1,4 @@
-# PI-2---Datathon---Henry
+# PI-2---Datathon---
 
 In this project I implemented machine learning to categorize price values for properties in Colombia, more precisely, to predict if a property would be expensive or cheap.
 

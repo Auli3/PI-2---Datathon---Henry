@@ -28,4 +28,4 @@ PI 2 Datathon_v2, this Jupyter Notebook file cointains the estudy, transformatio
 
 properties_Colombia.rar, .rar file containing the datasets used to train and test the model.
 
-pred.csv, in this file I saved the predictions done by the model.
+pred_v2.csv, in this file I saved the predictions done by the model.

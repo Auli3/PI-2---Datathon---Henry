@@ -22,6 +22,8 @@ Surpringsily the cardinal points that I had created didn´t had much correlation
 
 I'll be using a Logistic Regression model to predict my target label, since I think it's more reliable when it comes to not overfit unlike a Decision Tree.
 
+![alt text]([http://url/to/img.png](https://miro.medium.com/max/460/1*klFuUpBGVAjTfpTak2HhUA.png))
+
 Once the model is trained with my features and target label, I need it to make predictions with new data, so for that I import as a pandas dataframe the properties_colombia_test.csv file.
 
 And finally, I save the predictions my model did in a .csv file.

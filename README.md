@@ -2,7 +2,11 @@
 
 In this project I implemented machine learning to categorize price values for properties in Colombia, more precisely, to predict if a property would be expensive or cheap.
 
-I started by estudying the .csv data trough python pandas and dropping the columns with more NaN values (most of these with over %70 of missing data) and other columns with just descriptions that I considered not relevant for my task.
+I started by estudying the properties_colombia_train.csv data trough python pandas and dropping the columns with more NaN values (most of these with over %70 of missing data) and other columns with just descriptions that I considered not relevant for my task.
+
+Before I decided to drop most of the columns, I tried to fill them, mostly because those columns happened to be the ones with the state, city and neighboorhud.
+
+I tried using a function with geopy to get the locations for each of these columns, but at the time of applying the function in that field it would take too long for fully filling them, it's also worth pointing that the names of the locations given by the library not all matched with the locations already in the columns, so it would have made the process of normalizing the columns all more difficult.
 
 With the remaining columns there were still some NaN values so I checked each individually to see if I tried to fill them or drop those entries.
 
@@ -14,9 +18,11 @@ With all my features created and without missing values, I needed to encode each
 
 As I need to see wich features have the best correlation with my target label, I make use of the library seaborn and it's correlation heatmap.
 
-I'll be using a Logistic Regression model to predict my target label.
+Surpringsily the cardinal points that I had created didn´t had much correlation with the target label, so I decided the best was not to use them, as it would have created unnecesary noise in the prediction.
 
-Once the model is trained with my features and target label, I need it to make predictions with new data, so for that I import as a pandas dataframe another .csv file.
+I'll be using a Logistic Regression model to predict my target label, since I think it's more reliable when it comes to not overfit unlike a Decision Tree.
+
+Once the model is trained with my features and target label, I need it to make predictions with new data, so for that I import as a pandas dataframe the properties_colombia_test.csv file.
 
 And finally, I save the predictions my model did in a .csv file.
 
@@ -26,4 +32,4 @@ PI 2 Datathon, this Jupyter Notebook file cointains the estudy, transformations 
 
 properties_Colombia, .rar file containing the datasets used to train and test the model.
 
-pred.csv, in this file I saved the predictions done by the model.
+Auli3.csv, in this file I saved the predictions done by the model.
